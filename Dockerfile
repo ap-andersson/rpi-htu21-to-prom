@@ -9,7 +9,8 @@ RUN pip install --no-cache-dir \
     requests \
     prometheus_client \
     adafruit-circuitpython-htu21d \
-    RPi.GPIO
+    RPi.GPIO \
+    lgpio
 
 COPY main.py .
 
