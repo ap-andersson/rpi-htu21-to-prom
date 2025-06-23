@@ -1,0 +1,13 @@
+
+services:
+  rpi-htu21-to-prom:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    container_name: rpi-htu21-to-prom
+    ports:
+      - 8000:8000
+    environment:
+      - GPIOZERO_PIN_FACTORY=rpigpio
+    privileged: true
+    restart: unless-stopped
